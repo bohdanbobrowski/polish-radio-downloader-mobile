@@ -13,7 +13,8 @@
         "cordova-android": "^6.2.3",
         "cordova-plugin-shortcut": "^1.0.1",
         "cordova-plugin-whitelist": "^1.3.2",
-        "shortcut": "0.0.4"
+        "shortcut": "0.0.4",
+        "com.plugins.shortcut": "~0.0.2"
     },
     "cordova": {
         "plugins": {
