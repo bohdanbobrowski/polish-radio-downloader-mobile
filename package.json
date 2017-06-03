@@ -1,0 +1,27 @@
+{
+    "name": "pl.com.bobrowski.prdl",
+    "displayName": "Polish Radio Downloader",
+    "version": "0.1.0",
+    "description": "Project aims to create iOS/Android app which can download podcasts from Polish Radio website directly to your handy.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-shortcut": "^1.0.1",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "shortcut": "0.0.4"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "com.plugins.shortcut": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
+}

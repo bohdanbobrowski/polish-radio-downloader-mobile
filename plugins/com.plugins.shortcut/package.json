@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-shortcut",
+      "/home/bohdan/Skrypty/cordova/prdl"
+    ]
+  ],
+  "_from": "cordova-plugin-shortcut@latest",
+  "_id": "cordova-plugin-shortcut@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-shortcut",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "email": "reon90@gmail.com",
+    "name": "reon"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "cordova-plugin-shortcut",
+    "raw": "cordova-plugin-shortcut",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-shortcut/-/cordova-plugin-shortcut-1.0.1.tgz",
+  "_shasum": "80452bef9494e0d8724906334ee484661b25b1ff",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-shortcut",
+  "_where": "/home/bohdan/Skrypty/cordova/prdl",
+  "author": {
+    "name": "reon"
+  },
+  "bugs": {
+    "url": "https://github.com/paul-em/ShortcutPlugin/issues"
+  },
+  "dependencies": {},
+  "description": "---",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "80452bef9494e0d8724906334ee484661b25b1ff",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-shortcut/-/cordova-plugin-shortcut-1.0.1.tgz"
+  },
+  "homepage": "https://github.com/paul-em/ShortcutPlugin#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "reon",
+      "email": "reon90@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-shortcut",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-em/ShortcutPlugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

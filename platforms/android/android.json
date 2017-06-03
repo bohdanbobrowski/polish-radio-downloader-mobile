@@ -1,0 +1,61 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ShortcutPlugin\"><param name=\"android-package\" value=\"com.plugins.shortcut.ShortcutPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
+        },
+        "com.plugins.shortcut": {
+            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com.plugins.shortcut.ShortcutPlugin",
+            "file": "plugins/com.plugins.shortcut/www/ShortcutPlugin.js",
+            "pluginId": "com.plugins.shortcut",
+            "clobbers": [
+                "ShortcutPlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.2",
+        "com.plugins.shortcut": "0.0.2"
+    }
+}
