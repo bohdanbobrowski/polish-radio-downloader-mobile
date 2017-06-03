@@ -1,0 +1,87 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-curl",
+      "/home/bohdan/Skrypty/cordova/prdl"
+    ]
+  ],
+  "_from": "cordova-plugin-curl@latest",
+  "_id": "cordova-plugin-curl@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-curl",
+  "_nodeVersion": "0.12.1",
+  "_npmUser": {
+    "email": "twindsor@blackberry.com",
+    "name": "timwindsor"
+  },
+  "_npmVersion": "2.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "cordova-plugin-curl",
+    "raw": "cordova-plugin-curl",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-curl/-/cordova-plugin-curl-1.0.1.tgz",
+  "_shasum": "0d303fd46c9c62148500631aeafb51ebf665b598",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-curl",
+  "_where": "/home/bohdan/Skrypty/cordova/prdl",
+  "author": {
+    "name": "Merrick Zhang"
+  },
+  "bugs": {
+    "url": "https://github.com/blackberry/WebWorks-Community-APIs/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-curl",
+    "platforms": [
+      "blackberry10"
+    ]
+  },
+  "dependencies": {},
+  "description": "BlackBerry 10 Community Contributed API to make network calls with CURL",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "0d303fd46c9c62148500631aeafb51ebf665b598",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-curl/-/cordova-plugin-curl-1.0.1.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0"
+    }
+  ],
+  "homepage": "https://github.com/blackberry/WebWorks-Community-APIs/tree/master/BB10-Cordova/Curl#readme",
+  "keywords": [
+    "blackberry",
+    "cordova",
+    "cordova-blackberry10",
+    "curl",
+    "ecosystem:cordova",
+    "network"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "timwindsor",
+      "email": "twindsor@blackberry.com"
+    }
+  ],
+  "name": "cordova-plugin-curl",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackberry/WebWorks-Community-APIs.git"
+  },
+  "scripts": {},
+  "version": "1.0.1"
+}
