@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
       <title>Polish Radio Downloader</title>
       <link rel="stylesheet" href="css/framework7.ios.min.css">
       <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
@@ -22,6 +23,9 @@
          <div class="view view-main">
             <div class="navbar">
                <div class="navbar-inner">
+                  <div class="left">
+                     <a href="#" id="nav_back_button" class="back link icon-only" style="opacity:0"> <i class="icon icon-back"></i></a>
+                  </div>
                   <div class="center sliding">Polish Radio Downloader</div>
                   <div class="right">
                      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
@@ -34,17 +38,7 @@
                      <div class="content-block-title">Strona główna</div>
                      <div class="list-block">
                         <ul id="menu_strona_glowna">
-                           <!--
-                              <li>
-                              <a href="about.html" class="item-link">
-                              <div class="item-content">
-                              <div class="item-inner"><div class="item-title">About</div></div>
-                              </div>
-                              </a>
-                              </li>
-                           -->
                         </ul>
-                        <pre id="debug"></pre>
                      </div>
                   </div>
                </div>
