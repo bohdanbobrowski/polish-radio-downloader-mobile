@@ -29,6 +29,12 @@
 		907E34F187E54804B9C3176F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF63AF85208E4333A1965550 /* AFURLSessionManager.m */; };
 		31363CB4C009405E83AA1E74 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B4B9BF06374202BFBCCBFB /* Security.framework */; };
 		22DD6CC2DF1A499CAA8EC91A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE1F59FAB374470BFB95148 /* SystemConfiguration.framework */; };
+		7C6391CE239F49A7B1069FDB /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AA5E3405984C6F8C1598BF /* CDVFileTransfer.m */; };
+		705FE9D8AA0F459797B2F5AD /* AppDelegate+notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 332343D6923341C5AA433655 /* AppDelegate+notification.m */; };
+		74EA67776A09447191057E17 /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A1829D7DAE9D403FB6D526E6 /* PushPlugin.m */; };
+		E387160FF0524AB2BD68328F /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DAAF5731734A8F9E4E8B62 /* AddressBook.framework */; };
+		A65704958E0B46EB983196E2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD2C852CB724FB4BB5FB9AB /* libsqlite3.tbd */; };
+		CD5E27D792ED4909B8452920 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9BD6FCD6D34D45BB5A4D01 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +100,15 @@
 		E381CD45210A40E6950BB8A2 /* AFURLSessionManager.h */ = {isa = PBXFileReference; name = "AFURLSessionManager.h"; path = "cordova-plugin-http/AFURLSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		F0B4B9BF06374202BFBCCBFB /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		6BE1F59FAB374470BFB95148 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C2AA5E3405984C6F8C1598BF /* CDVFileTransfer.m */ = {isa = PBXFileReference; name = "CDVFileTransfer.m"; path = "cordova-plugin-file-transfer/CDVFileTransfer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C136E8DF743B4DD28C2A6628 /* CDVFileTransfer.h */ = {isa = PBXFileReference; name = "CDVFileTransfer.h"; path = "cordova-plugin-file-transfer/CDVFileTransfer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		332343D6923341C5AA433655 /* AppDelegate+notification.m */ = {isa = PBXFileReference; name = "AppDelegate+notification.m"; path = "phonegap-plugin-push/AppDelegate+notification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A1829D7DAE9D403FB6D526E6 /* PushPlugin.m */ = {isa = PBXFileReference; name = "PushPlugin.m"; path = "phonegap-plugin-push/PushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EFD23BA8064547E1883B80CD /* AppDelegate+notification.h */ = {isa = PBXFileReference; name = "AppDelegate+notification.h"; path = "phonegap-plugin-push/AppDelegate+notification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		82B386D312CA49F394D78F17 /* PushPlugin.h */ = {isa = PBXFileReference; name = "PushPlugin.h"; path = "phonegap-plugin-push/PushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C8DAAF5731734A8F9E4E8B62 /* AddressBook.framework */ = {isa = PBXFileReference; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		1FD2C852CB724FB4BB5FB9AB /* libsqlite3.tbd */ = {isa = PBXFileReference; name = "libsqlite3.tbd"; path = "usr/lib/libsqlite3.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		4C9BD6FCD6D34D45BB5A4D01 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +119,9 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				31363CB4C009405E83AA1E74 /* Security.framework in Frameworks */,
 				22DD6CC2DF1A499CAA8EC91A /* SystemConfiguration.framework in Frameworks */,
+				E387160FF0524AB2BD68328F /* AddressBook.framework in Frameworks */,
+				A65704958E0B46EB983196E2 /* libsqlite3.tbd in Frameworks */,
+				CD5E27D792ED4909B8452920 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +194,9 @@
 			children = (
 				F0B4B9BF06374202BFBCCBFB /* Security.framework */,
 				6BE1F59FAB374470BFB95148 /* SystemConfiguration.framework */,
+				C8DAAF5731734A8F9E4E8B62 /* AddressBook.framework */,
+				1FD2C852CB724FB4BB5FB9AB /* libsqlite3.tbd */,
+				4C9BD6FCD6D34D45BB5A4D01 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,6 +245,12 @@
 				A783B69521F845889BE62192 /* AFURLRequestSerialization.h */,
 				1D4F0FDD9FD74F6CBC28CC27 /* AFURLResponseSerialization.h */,
 				E381CD45210A40E6950BB8A2 /* AFURLSessionManager.h */,
+				C2AA5E3405984C6F8C1598BF /* CDVFileTransfer.m */,
+				C136E8DF743B4DD28C2A6628 /* CDVFileTransfer.h */,
+				332343D6923341C5AA433655 /* AppDelegate+notification.m */,
+				A1829D7DAE9D403FB6D526E6 /* PushPlugin.m */,
+				EFD23BA8064547E1883B80CD /* AppDelegate+notification.h */,
+				82B386D312CA49F394D78F17 /* PushPlugin.h */,
 			);
 			name = Plugins;
 			path = "Polish Radio Downloader/Plugins";
@@ -347,6 +374,9 @@
 				E4DFC9E9B1484B7387FAE2F0 /* AFURLRequestSerialization.m in Sources */,
 				09F38D645BF64AB7B2F7A90D /* AFURLResponseSerialization.m in Sources */,
 				907E34F187E54804B9C3176F /* AFURLSessionManager.m in Sources */,
+				7C6391CE239F49A7B1069FDB /* CDVFileTransfer.m in Sources */,
+				705FE9D8AA0F459797B2F5AD /* AppDelegate+notification.m in Sources */,
+				74EA67776A09447191057E17 /* PushPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

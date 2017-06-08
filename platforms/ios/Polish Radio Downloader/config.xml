@@ -22,6 +22,9 @@
     <feature name="CordovaHttpPlugin">
         <param name="ios-package" value="CordovaHttpPlugin" />
     </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
     <name>Polish Radio Downloader</name>
     <description />
     <author email="bohdan@bobrowski.com.pl" href="http://bobrowski.com.pl" />
@@ -49,4 +52,7 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <feature name="PushNotification">
+        <param name="ios-package" value="PushPlugin" />
+    </feature>
 </widget>

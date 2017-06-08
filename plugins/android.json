@@ -18,13 +18,20 @@
         },
         "cordova-plugin-curl": {
             "PACKAGE_NAME": "pl.com.bobrowski.prdl"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "85075801930",
+            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
-        },
-        "cordova-plugin-file": {
             "PACKAGE_NAME": "pl.com.bobrowski.prdl"
         }
     }
