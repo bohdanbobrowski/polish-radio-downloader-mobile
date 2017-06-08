@@ -16,10 +16,6 @@
         "cordova-plugin-http": {
             "PACKAGE_NAME": "pl.com.bobrowski.prdl"
         },
-        "phonegap-plugin-push": {
-            "SENDER_ID": "85075801930",
-            "PACKAGE_NAME": "pl.com.bobrowski.prdl"
-        },
         "cordova-plugin-curl": {
             "PACKAGE_NAME": "pl.com.bobrowski.prdl"
         }

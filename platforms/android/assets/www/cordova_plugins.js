@@ -190,14 +190,6 @@ module.exports = [
         ]
     },
     {
-        "id": "phonegap-plugin-push.PushNotification",
-        "file": "plugins/phonegap-plugin-push/www/push.js",
-        "pluginId": "phonegap-plugin-push",
-        "clobbers": [
-            "PushNotification"
-        ]
-    },
-    {
         "id": "cordova-plugin-curl.client",
         "file": "plugins/cordova-plugin-curl/www/client.js",
         "pluginId": "cordova-plugin-curl",
@@ -214,7 +206,6 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-http": "1.2.0",
-    "phonegap-plugin-push": "1.10.4",
     "cordova-plugin-curl": "1.0.1"
 };
 // BOTTOM OF METADATA

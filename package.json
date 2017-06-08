@@ -13,6 +13,7 @@
         "com.plugins.shortcut": "~0.0.2",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
+        "cordova-ios": "^4.4.0",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-curl": "^1.0.1",
         "cordova-plugin-file": "^4.3.3",
