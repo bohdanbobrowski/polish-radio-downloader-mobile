@@ -10,7 +10,6 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
-        "com.plugins.shortcut": "~0.0.2",
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
         "cordova-ios": "^4.4.0",
@@ -19,23 +18,22 @@
         "cordova-plugin-file": "^4.3.3",
         "cordova-plugin-file-transfer": "^1.6.3",
         "cordova-plugin-http": "^1.2.0",
-        "cordova-plugin-shortcut": "^1.0.1",
         "cordova-plugin-whitelist": "^1.3.2",
         "download-manager": "^0.1.3",
         "phonegap-plugin-push": "^1.10.4",
-        "shortcut": "0.0.4"
+        "com.plugins.shortcut": "~0.0.2"
     },
     "cordova": {
         "plugins": {
             "cordova-plugin-whitelist": {},
-            "com.plugins.shortcut": {},
             "cordova-plugin-http": {},
             "phonegap-plugin-push": {
                 "SENDER_ID": "85075801930"
             },
             "cordova-plugin-curl": {},
             "cordova-plugin-file-transfer": {},
-            "cordova-plugin-file": {}
+            "cordova-plugin-file": {},
+            "com.plugins.shortcut": {}
         },
         "platforms": [
             "android",
