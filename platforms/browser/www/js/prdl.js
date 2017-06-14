@@ -7,6 +7,7 @@ var mainView = myApp.addView('.view-main', {
 
 var categories = [];
 var prdl_id = 0;
+var queue_id = 0;
 
 myApp.onPageInit('index', function (page) {   
    $$.ajax({
@@ -105,23 +106,49 @@ function readAllPages(page) {
                file_name = file_name + '.mp3';
             }
             var fileTransfer = new FileTransfer();
-            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
-               alert(fileSystem.name);
-            });            
-            fileTransfer.download(
-               file_url,
-               // '/sdcard/PolskieRadioDownloader/'+
-               file_name,
-               function(entry) {
-                  alert("download complete: " + entry.toURL());
-               },
-               function(error) {
-                  console.log("download error source " + error.source);
-                  console.log("download error target " + error.target);
-                  console.log("download error code" + error.code);
-               },
-               true
-            );
+            queue_id = queue_id+1;
+            $$('#DownloadQueue').prepend(getDownloadQueueItem(queue_id, title));
+            fileTransfer.onprogress = function(progressEvent) {               
+               if (progressEvent.lengthComputable) {     
+                  $$('#DownloadQueueItem_'+queue_id+' em').html(bytesToSize(progressEvent.total));
+                  var percentage = progressEvent.loaded / progressEvent.total * 100;
+                  $$('#DownloadQueueItem_'+queue_id+' span').css('width', percentage+'%');
+               } else {
+                  $$('#DownloadQueueItem_'+queue_id+' span').css('width', '50%');
+               }
+            };
+            window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, onFileSystemSuccess, onError);
+            function onError(e) {
+               alert("Wystąpił błąd");
+            };
+            function onFileSystemSuccess(fileSystem) {
+               var entry = "";
+               entry = fileSystem;
+               entry.getDirectory('PolskieRadioDownloader', {
+                  create: true,
+                  exclusive: false
+               }, onGetDirectorySuccess, onError);
+            };
+            function onGetDirectorySuccess(dir) {
+               cdr = dir;
+               dir.getFile(file_name, {
+                  create: true,
+                  exclusive: false
+               }, gotFileEntry, onError);
+            };
+            function gotFileEntry(fileEntry) {
+               var uri = encodeURI(file_url);
+               fileTransfer.download(
+                  uri,
+                  cdr.nativeURL + file_name,
+                  function(entry) {
+                     console.log(cdr.nativeURL + file_name);
+                     $$('#DownloadQueueItem_'+queue_id+' span').css('width', '100%');
+                     $$('#DownloadQueueItem_'+queue_id).addClass('downloaded');                  
+                     $$('#DownloadQueueItem_'+queue_id+' a').attr('href',cdr.nativeURL + file_name);
+                  }
+               );
+            };
          });
          $$('#menu_podstrony_'+page.id+' a.prdl_page').on('click', function (e) {
             var id = $$(this).attr('data-prdl-id');
@@ -130,6 +157,18 @@ function readAllPages(page) {
       }
    });
 }
+
+function getDownloadQueueItem(id, title) {
+   return '<li id="DownloadQueueItem_'+id+'"><a href="#"><strong>'+title+'</strong> <em></em><span></span></a></li>';
+}
+
+// https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript
+function bytesToSize(bytes) {
+   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+   if (bytes == 0) return '0 Byte';
+   var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+   return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+};
 
 function getPageLink(item, id) {
    var html = '<li><a href="#" class="item-link prdl_page" data-prdl-title="'+item.title+'" data-prdl-link="'+item.url+'" data-prdl-id="'+id+'">';

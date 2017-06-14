@@ -1,11 +1,13 @@
 *~
 *.swp
 *.swo
+node_modules/
 platforms/ios/build/
 platforms/ios/www/
 platforms/ios/cordova/console.log
 *.xcuserdatad
 platforms/android/assets/www
+platforms/android/build
 platforms/android/bin
 platforms/android/gen
 platforms/android/local.properties

@@ -7,6 +7,7 @@ var mainView = myApp.addView('.view-main', {
 
 var categories = [];
 var prdl_id = 0;
+var queue_id = 0;
 
 myApp.onPageInit('index', function (page) {   
    $$.ajax({
@@ -105,6 +106,17 @@ function readAllPages(page) {
                file_name = file_name + '.mp3';
             }
             var fileTransfer = new FileTransfer();
+            queue_id = queue_id+1;
+            $$('#DownloadQueue').prepend(getDownloadQueueItem(queue_id, title));
+            fileTransfer.onprogress = function(progressEvent) {               
+               if (progressEvent.lengthComputable) {     
+                  $$('#DownloadQueueItem_'+queue_id+' em').html(bytesToSize(progressEvent.total));
+                  var percentage = progressEvent.loaded / progressEvent.total * 100;
+                  $$('#DownloadQueueItem_'+queue_id+' span').css('width', percentage+'%');
+               } else {
+                  $$('#DownloadQueueItem_'+queue_id+' span').css('width', '50%');
+               }
+            };
             window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, onFileSystemSuccess, onError);
             function onError(e) {
                alert("Wystąpił błąd");
@@ -130,7 +142,10 @@ function readAllPages(page) {
                   uri,
                   cdr.nativeURL + file_name,
                   function(entry) {
-                     alert('Zakończono pobieranie: '+file_name);
+                     console.log(cdr.nativeURL + file_name);
+                     $$('#DownloadQueueItem_'+queue_id+' span').css('width', '100%');
+                     $$('#DownloadQueueItem_'+queue_id).addClass('downloaded');                  
+                     $$('#DownloadQueueItem_'+queue_id+' a').attr('href',cdr.nativeURL + file_name);
                   }
                );
             };
@@ -142,6 +157,18 @@ function readAllPages(page) {
       }
    });
 }
+
+function getDownloadQueueItem(id, title) {
+   return '<li id="DownloadQueueItem_'+id+'"><a href="#"><strong>'+title+'</strong> <em></em><span></span></a></li>';
+}
+
+// https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript
+function bytesToSize(bytes) {
+   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+   if (bytes == 0) return '0 Byte';
+   var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+   return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+};
 
 function getPageLink(item, id) {
    var html = '<li><a href="#" class="item-link prdl_page" data-prdl-title="'+item.title+'" data-prdl-link="'+item.url+'" data-prdl-id="'+id+'">';

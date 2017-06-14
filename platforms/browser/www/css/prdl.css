@@ -1,0 +1,30 @@
+#DownloadQueue {
+   display: block;
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+#DownloadQueue li {
+   display: block;
+   list-style-type: none;
+   padding: 0;
+   margin: 0 0 10px 0;
+}
+
+#DownloadQueue li span {
+   display: block;
+   background: #007aff;
+   height: 2px;
+   width: 0;
+   clear: both;
+   overflow: hidden;
+}
+
+#DownloadQueue li.downloaded {
+   opacity: 0.6;
+}
+
+#DownloadQueue li.downloaded span {
+  background: #666;
+}
